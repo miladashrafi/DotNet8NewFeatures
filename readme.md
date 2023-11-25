@@ -1,33 +1,21 @@
 # **.NET 8 / C# 12 Most Important New Features**
 
-## **Json Improvements**
+## .NET / ASP.NET
 - JsonStringEnumConverter => JsonStringEnumConverter<Tenum>
 - Interface Hierarchy Serialization
 - ReadOnly fields deserialization
-
-## **Randomness Improvements**
 - GetItems<T>()
 - Shuffle<T>()
-
-## **Collection Improvements**
 - ToFrozenDictionary()
-
-## **Security Improvements**
 - SHA-3 hashing primitives
-
-## **Performance News**
 - Adjust the memory limit on the fly
-
-## **Native AOT Support**
-- Reduce App size, Memory, Startup time
-
-## **ASP.NET Core News**
-- Performance Improvements
-- New Identity API endpoints
+- Native AOT Support (Reduce App size, Memory, Startup time)
 - Keyed Services
-- New Runtime Metrics + OpenTelemetry + Grafana Dashboard
 - Redis Based Output Caching
+- New Identity API endpoints
 - Debugging improvements
+
+## Performance Improvements
 
 ## **C# 12 News**
 - Primary Constructors
@@ -37,20 +25,21 @@
   - AlowedValues / DeniedValues
   - Length
   - Range new validation parameters
+- Alias any types
+- Lambda Expression defaults
 
 ## **EF Core 8 News**
 - Checking for pending model changes
 - DateOnly/TimeOnly Support on SQL Server
 - HierarchyId
-- Complex Types improvements
 - "In" queries improvement
 
 ## **Blazor News**
 - QuickGrid
 - New Scaffolder
-- New WebApp Template
+- New WebApp Template (Server side rendering / Client side rendering)
 - Streaming Rendering
 - Auto Rendering Mode (Server / WebAssembly)
 
 ## **.NET ASPIRE**
-- New cloud-native host + orchestrator
+- New cloud-native host / builder
