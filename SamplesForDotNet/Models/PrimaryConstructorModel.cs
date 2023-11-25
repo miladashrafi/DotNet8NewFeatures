@@ -7,8 +7,18 @@
 
     public class OldConstructorModel
     {
-        private int _d41d8cd98f00b204e9800998ecf8427e_number;
+        private int _number;
         public OldConstructorModel(int number)
+        {
+            _number = number;
+        }
+        public int increment() => _number++;
+    }
+
+    public class ConvertedConstructorModel
+    {
+        private int _d41d8cd98f00b204e9800998ecf8427e_number;
+        public ConvertedConstructorModel(int number)
         {
             _d41d8cd98f00b204e9800998ecf8427e_number = number;
         }
