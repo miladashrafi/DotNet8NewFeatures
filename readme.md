@@ -7,7 +7,6 @@
 - GetItems<T>()
 - Shuffle<T>()
 - ToFrozenDictionary()
-- SHA-3 hashing primitives
 - Adjust the memory limit on the fly
 - Native AOT Support (Reduce App size, Memory, Startup time)
 - Keyed Services
