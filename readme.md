@@ -15,8 +15,6 @@
 - New Identity API endpoints
 - Debugging improvements
 
-## Performance Improvements
-
 ## **C# 12 News**
 - Primary Constructors
 - Collection Expressions
@@ -43,3 +41,5 @@
 
 ## **.NET ASPIRE**
 - New cloud-native host / builder
+
+## Performance Improvements
