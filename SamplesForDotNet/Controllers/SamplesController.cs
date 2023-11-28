@@ -1,7 +1,9 @@
+using DotNet8NewFeatures.Context;
 using DotNet8NewFeatures.Models;
 using DotNet8NewFeatures.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Frozen;
 using System.Text.Json;
 using CustomButton = (int Id, DotNet8NewFeatures.Models.Button Button);
@@ -83,6 +85,21 @@ namespace DotNet8NewFeatures.Controllers
         public IActionResult AuthorizeSample()
         {
             return Content("You are authorized!");
+        }
+
+        [HttpGet("hierarchy-id-get-level")]
+        public IActionResult HierarchyIdGetLevel()
+        {
+            using var scope = serviceProvider.CreateScope();
+            var dbContext = scope.ServiceProvider.GetRequiredService<DataContext>();
+            var items = dbContext.Departments.Select(x=> new
+            {
+                Level = x.Path.GetLevel(),
+                x.Name,
+                Path = x.Path.ToString(),
+                x.ParentId
+            });
+            return Ok(items.ToList());
         }
 
         [HttpGet("DefaultValue")]
