@@ -3,6 +3,7 @@ using DotNet8NewFeatures.Models;
 using DotNet8NewFeatures.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OutputCaching;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Frozen;
 using System.Text.Json;
@@ -88,6 +89,7 @@ namespace DotNet8NewFeatures.Controllers
         }
 
         [HttpGet("hierarchy-id-get-level")]
+        [OutputCache]
         public IActionResult HierarchyIdGetLevel()
         {
             using var scope = serviceProvider.CreateScope();
