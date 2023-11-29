@@ -2,7 +2,7 @@
 {
     public class PrimaryConstructorModel(int number)
     {
-        public void increment() => number++;
+        public int Increment() => number++;
     }
 
     public class OldConstructorModel
@@ -12,7 +12,7 @@
         {
             _number = number;
         }
-        public int increment() => _number++;
+        public int Increment() => _number++;
     }
 
     public class ConvertedConstructorModel
@@ -22,7 +22,7 @@
         {
             _d41d8cd98f00b204e9800998ecf8427e_number = number;
         }
-        public int increment() => _d41d8cd98f00b204e9800998ecf8427e_number++;
+        public int Increment() => _d41d8cd98f00b204e9800998ecf8427e_number++;
     }
 
     public class PrimaryConstructorModel2(int number) : PrimaryConstructorModel(number)
