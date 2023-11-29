@@ -1,4 +1,6 @@
-﻿namespace DotNet8NewFeatures.Models
+﻿using System.Collections.ObjectModel;
+
+namespace DotNet8NewFeatures.Models
 {
     public class CollectionExpressionModel
     {
@@ -29,6 +31,12 @@
             }
             // output:
             // 1, 2, 3, 4, 5, 6, 7, 8, 9,
+
+            //Range sample from C# 8.0
+            var aaa = row0[0..2];
+            var ccc = row0[..2];
+            var bbb = row0[^2];
+
         }
         public void OldExpressions()
         {
