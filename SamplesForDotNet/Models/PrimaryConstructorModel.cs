@@ -1,5 +1,4 @@
-﻿global using Amount = decimal;
-namespace DotNet8NewFeatures.Models
+﻿namespace DotNet8NewFeatures.Models
 {
     public class PrimaryConstructorModel(int number)
     {
@@ -8,7 +7,6 @@ namespace DotNet8NewFeatures.Models
 
     public class PrimaryConstructorReadOnlyModel(int number)
     {
-        public Amount TicketAmount { get; set; }
         private readonly int _number = number;
         public int GetNumber() => _number;
     }
