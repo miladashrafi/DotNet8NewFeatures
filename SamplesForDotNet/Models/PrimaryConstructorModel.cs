@@ -1,8 +1,28 @@
-﻿namespace DotNet8NewFeatures.Models
+﻿global using Amount = decimal;
+namespace DotNet8NewFeatures.Models
 {
     public class PrimaryConstructorModel(int number)
     {
         public int Increment() => number++;
+    }
+
+    public class PrimaryConstructorReadOnlyModel(int number)
+    {
+        public Amount TicketAmount { get; set; }
+        private readonly int _number = number;
+        public int GetNumber() => _number;
+    }
+
+    public class ConvertedConstructorReadOnlyModel
+    {
+        private int _d41d8cd98f00b204e9800998ecf8427e_number;
+        private readonly int _number;
+        public ConvertedConstructorReadOnlyModel(int number)
+        {
+            _d41d8cd98f00b204e9800998ecf8427e_number = number;
+            _number = _d41d8cd98f00b204e9800998ecf8427e_number;
+        }
+        public int GetNumber() => _number;
     }
 
     public class OldConstructorModel
