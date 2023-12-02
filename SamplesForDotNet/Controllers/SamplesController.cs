@@ -128,5 +128,12 @@ namespace DotNet8NewFeatures.Controllers
 
             return Content(JsonSerializer.Serialize(results));
         }
+
+        [OutputCache]
+        [HttpGet("Sample")]
+        public IActionResult Sample(string input)
+        {
+            return Ok(input);
+        }
     }
 }
